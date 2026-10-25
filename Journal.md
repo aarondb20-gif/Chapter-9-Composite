@@ -9,3 +9,10 @@ Phase 2
 I created a Bag class that can hold an arraylist of items, add the total weight of the items plus base weight of the bag,
 and display bag information listing all items in the bag. Since Bag and Item share the same Component abstract class,
 polymorphism allows it to treat every bag and item as if it is another variation of the same object.
+
+Phase 3
+I created new bag objects, added items to bags, and put bags inside of root bag to illustrate recursion. Also,
+implemented try-catch test on an unsupported method to display a proper error message. If I needed to make a weightless
+bag I would only need to modify the Bag class and set the base weight to 0.0. I wouldn't need to modify the the Component
+or Item classes. The Composite pattern supports the open/closed principle by allowing Item and Bag to override the 
+getWeight method, and allow each component to have it's own base weight without needing to modify other classes.
