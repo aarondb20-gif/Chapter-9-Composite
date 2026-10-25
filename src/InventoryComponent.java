@@ -5,7 +5,7 @@ public abstract class InventoryComponent {
     public void remove(InventoryComponent inventoryComponent){
         throw new UnsupportedOperationException();
     }
-    public void getChild(int i){
+    public InventoryComponent getChild(int i){
         throw new UnsupportedOperationException();
     }
     public String getName(){
