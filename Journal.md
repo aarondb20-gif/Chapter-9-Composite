@@ -16,3 +16,10 @@ implemented try-catch test on an unsupported method to display a proper error me
 bag I would only need to modify the Bag class and set the base weight to 0.0. I wouldn't need to modify the the Component
 or Item classes. The Composite pattern supports the open/closed principle by allowing Item and Bag to override the 
 getWeight method, and allow each component to have it's own base weight without needing to modify other classes.
+
+Phase 4
+The AI tutor found that it could accept negative or invalid weight, so I did implement a if statement to check if the 
+weight is a finite number. Other edge cases are adding bag1 to bag1 to create infinite recursion, and adding the same 
+item to different bags. Putting the same bag inside itself usually wouldn't happen, but I could make an Exception error
+message for it. Putting the same item inside two different bags could make sense if user has more than one instance of 
+the same item.

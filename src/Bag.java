@@ -7,11 +7,17 @@ public class Bag extends InventoryComponent{
 
     public Bag(String name, double baseWeight){
         this.name = name;
+        if (!Double.isFinite(baseWeight) || baseWeight < 0) {
+            throw new IllegalArgumentException(
+                    "Weight must be finite and non-negative."
+            );
+        }
         this.baseWeight = baseWeight;
 
     }
 
     public void add(InventoryComponent inventoryComponent){
+
         items.add(inventoryComponent);
     }
     public void remove(InventoryComponent inventoryComponent){
@@ -32,6 +38,7 @@ public class Bag extends InventoryComponent{
         }
         return totalWeight;
     }
+
     public void displayInfo(){
         System.out.println(name + " Base Weight: " + baseWeight + " lbs.");
         for(InventoryComponent component : items){

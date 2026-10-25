@@ -4,6 +4,12 @@ public class Item extends InventoryComponent{
 
     public Item(String name, double weight){
         this.name = name;
+
+        if (!Double.isFinite(weight) || weight < 0) {
+            throw new IllegalArgumentException(
+                    "Weight must be finite and non-negative."
+            );
+        }
         this.weight = weight;
     }
 

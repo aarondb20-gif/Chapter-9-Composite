@@ -9,12 +9,18 @@ public class Main {
         Bag bag2 = new Bag("Small Pouch: ",0.5);
         Bag bag3 = new Bag("Medium Bag: ",0.5);
 
+        Bag emptyBag = new Bag("Empty Bag: ",0.0);
+        System.out.println(emptyBag.getWeight());
+        emptyBag.displayInfo();
+
         bag1.add(item3);
         bag1.add(item4);
         bag2.add(item1);
         bag3.add(item2);
         bag1.add(bag3);
+        bag3.remove(item2);
         bag3.add(bag2);
+
         try {
             item1.add(item2);
         }catch (UnsupportedOperationException e){
